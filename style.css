@@ -85,3 +85,36 @@ body {
   height: auto;
   display: block;
 }
+
+.widget-lateral {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 12px;
+  font-size: 12px;
+}
+
+.widget-lateral h3 {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #66666666;
+  padding-bottom: 6px;
+}
+
+/* Status item */
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-size: 11px;
+}
+
+.status-label {
+  color: #999999;
+}
+
+.status-valor {
+  color: #cccccc;
+  font-weight: bold;
+}
