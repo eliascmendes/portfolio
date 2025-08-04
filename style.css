@@ -58,3 +58,30 @@ body {
     display: none;
   }
 }
+
+
+
+/* Site wrapper e conteúdo principal */
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-left: 240px;
+}
+
+.imagem-lateral-esquerda, .imagem-lateral-direita {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imagem-lateral-esquerda img, .imagem-lateral-direita img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
