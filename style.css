@@ -118,3 +118,27 @@ body {
   color: #cccccc;
   font-weight: bold;
 }
+
+
+/* Estatística widget */
+.estatistica-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+  padding: 6px;
+  border: 1px solid #444;
+}
+
+.estatistica-numero {
+  color: #00ff00;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.estatistica-label {
+  color: #999999;
+  font-size: 10px;
+  margin-top: 2px;
+}
