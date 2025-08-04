@@ -1,5 +1,5 @@
 body {
-  background: #0000;
+  background: #000000;
   font-family: 'Courier New', 'Courier New', Courier, monospace;
   color: #fff;
   margin: 0;
@@ -8,3 +8,27 @@ body {
   line-height: 1.5;
   min-height: 100vh;
 }
+
+.menu-lateral {
+  width: 200px;
+  background: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  border: 1px solid #666;
+  padding: 15px 0;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-bloco {
+  border-bottom: 1px dotted #666;
+  padding: 0 15px 12px 15px;
+  margin-bottom: 12px;
+}
+
