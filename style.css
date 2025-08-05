@@ -215,3 +215,21 @@ body {
   border-left-color: #999;
   color: #fff;
 }
+
+/* Citação widget */
+.widget-lateral .citacao {
+  font-style: italic;
+  text-align: center;
+}
+
+.widget-lateral .citacao p {
+  color: #ccc;
+  margin: 0 0 6px 0;
+  font-size: 11px;
+}
+
+.autor-citacao {
+  color: #666;
+  font-size: 10px;
+}
+
