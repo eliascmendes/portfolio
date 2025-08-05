@@ -161,3 +161,57 @@ body {
   background: #333;
   color: #fff;
 }
+
+
+/* Widget de preferências */
+.widget-lateral .preferencias {
+  position: relative;
+}
+
+.preferencias-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #666;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.preferencias-toggle {
+  background: none;
+  border: 1px solid #666;
+  color: #ccc;
+  font-size: 12px;
+  padding: 2px 6px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: all 0.2s ease;
+}
+
+.preferencias-toggle:hover {
+  background: #333;
+  color: #fff;
+  border-color: #999;
+}
+
+.preferencias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 140px;
+}
+
+.preferencia-item {
+  padding: 3px 6px;
+  font-size: 11px;
+  color: #ccc;
+  border-left: 2px solid #666;
+  padding-left: 8px;
+  transition: all 0.3 ease;
+  opacity: 1;
+}
+
+.preferencia-item:hover {
+  border-left-color: #999;
+  color: #fff;
+}
