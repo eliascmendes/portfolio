@@ -56,67 +56,43 @@ function selecionarGifFavorito() {
   return gifsFavoritos[indiceAleatorio]
 }
 
+function atualizarCapaComGif(gif) {
+  const imagemCapa = document.querySelector('.imagem-capa')
+  if (!imagemCapa || !gif) return
+
+  const imagemAnterior = imagemCapa.querySelector('img')
+  if (imagemAnterior) imagemAnterior.remove()
+
+  const novaImagem = document.createElement('img')
+  novaImagem.src = gif.url
+  novaImagem.alt = gif.alt
+  novaImagem.style.opacity = '0'
+  novaImagem.style.transition = 'opacity 0.5s ease-in-out'
+  imagemCapa.appendChild(novaImagem)
+
+  novaImagem.onload = function () {
+    novaImagem.style.opacity = '1'
+  }
+
+  reiniciarTimer()
+}
+
 // carregar GIF na capa
 function carregarCapaAleatoria() {
-  const imagemCapa = document.querySelector('.imagem-capa')
   const gifSelecionado = selecionarGifAleatorio()
-
-  if (imagemCapa) {
-    const imagemAnterior = imagemCapa.querySelector('img')
-    if (imagemAnterior) {
-      imagemAnterior.remove()
-    }
-
-    //  nova imagem
-    const novaImagem = document.createElement('img')
-    novaImagem.src = gifSelecionado.url
-    novaImagem.alt = gifSelecionado.alt
-
-    //  efeito de fade-in
-    novaImagem.style.opacity = '0'
-    novaImagem.style.transition = 'opacity 0.5s ease-in-out'
-
-    imagemCapa.appendChild(novaImagem)
-
-    // Fade-in após carregar
-    novaImagem.onload = function () {
-      novaImagem.style.opacity = '1'
-    }
-
-    console.log(`Capa carregada: ${gifSelecionado.alt}`)
-
-    reiniciarTimer()
-  }
+  atualizarCapaComGif(gifSelecionado)
+  if (gifSelecionado) console.log(`Capa carregada: ${gifSelecionado.alt}`)
 }
 
 //  GIF favorito na capa
 function carregarFavorito() {
-  const imagemCapa = document.querySelector('.imagem-capa')
-  const gifSelecionado = selecionarGifFavorito()
-
-  if (imagemCapa) {
-    const imagemAnterior = imagemCapa.querySelector('img')
-    if (imagemAnterior) {
-      imagemAnterior.remove()
-    }
-
-    const novaImagem = document.createElement('img')
-    novaImagem.src = gifSelecionado.url
-    novaImagem.alt = gifSelecionado.alt
-
-    novaImagem.style.opacity = '0'
-    novaImagem.style.transition = 'opacity 0.5s ease-in-out'
-
-    imagemCapa.appendChild(novaImagem)
-
-    novaImagem.onload = function () {
-      novaImagem.style.opacity = '1'
-    }
-
-    console.log(`GIF favorito carregado: ${gifSelecionado.alt}`)
-
-    reiniciarTimer()
+  if (!gifsFavoritos.length) {
+    carregarCapaAleatoria()
+    return
   }
+  const gifSelecionado = selecionarGifFavorito()
+  atualizarCapaComGif(gifSelecionado)
+  if (gifSelecionado) console.log(`GIF favorito carregado: ${gifSelecionado.alt}`)
 }
 
 function reiniciarTimer() {
@@ -141,6 +117,169 @@ function trocarCapa() {
   carregarCapaAleatoria()
 }
 
+// contador de visitantes
+function atualizarContador() {
+  const contadorElement = document.getElementById('contador-visitantes')
+  if (contadorElement) {
+    let visitantes = localStorage.getItem('visitantes') || 1
+    visitantes = parseInt(visitantes) + 1
+    localStorage.setItem('visitantes', visitantes)
+    contadorElement.textContent = visitantes
+  }
+}
+
+// att status dinâmicamente
+function atualizarStatus() {
+  const statusItems = [
+    {
+      label: 'Atualmente:',
+      valores: ['Codando', 'Estudando', 'Pensando'],
+    },
+    {
+      label: 'Ouvindo:',
+      valores: [
+        'The Smiths',
+        'Joy Division',
+        'Radiohead',
+        'The strokes',
+        'Black sabbath',
+        'Bob dylan',
+        'Elliott Smith',
+        'Jeff Buckley',
+        'Lana del Rey',
+        'Nirvana',
+        'Leornard Cohen',
+        'Neil Young',
+        'The cure',
+        'The Smashing Pumpkins',
+        'The voidz',
+        'Cigarettes After Sex',
+      ],
+    },
+    {
+      label: 'Assistindo:',
+      valores: [
+        'Serial Experiments Lain',
+        'Neon Genesis Evangelion',
+        'Perfect Blue',
+        'Akira',
+        'Hana & Alice',
+        'Where is the friends house',
+        'Paris, texas',
+        'Sound of metal',
+        'Manchester by the sea',
+        'Evil does not exist',
+        'Blade runner 2049',
+      ],
+    },
+  ]
+
+  const statusElements = document.querySelectorAll('.status-valor')
+  statusElements.forEach((element, index) => {
+    if (statusItems[index]) {
+      const valores = statusItems[index].valores
+      const valorAleatorio = valores[Math.floor(Math.random() * valores.length)]
+      element.style.opacity = '0'
+
+      setTimeout(() => {
+        element.textContent = valorAleatorio
+        element.style.opacity = '1'
+      }, 200)
+    }
+  })
+}
+
+// efeitos hover aos links rápidos
+function adicionarEfeitosLinks() {
+  const linksRapidos = document.querySelectorAll('.link-rapido')
+
+  linksRapidos.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      link.style.transform = 'scale(0.95)'
+      link.style.transition = 'transform 0.1s ease'
+
+      setTimeout(() => {
+        link.style.transform = 'scale(1)'
+      }, 100)
+    })
+  })
+}
+
+// inicializar todas as interatividades
+function inicializarWidgets() {
+  atualizarContador()
+  adicionarEfeitosLinks()
+
+  // Atualizar status a cada 30 segundos
+  setInterval(atualizarStatus, 30000)
+}
+
+// (gosto/não gosto)
+let mostrandoGostos = true
+
+const preferenciasData = {
+  gostos: [
+    'filmes',
+    'backend',
+    'café',
+    'chuva',
+    'silêncio',
+    'livros',
+    'música',
+    'noites frias',
+    'animes',
+    'contrabaixo',
+  ],
+  naoGostos: [
+    'sabádo',
+    'domingo',
+    'segunda-feira',
+  ],
+}
+
+function alternarPreferencias() {
+  const titulo = document.getElementById('preferencias-titulo')
+  const lista = document.getElementById('preferencias-lista')
+  const toggle = document.querySelector('.preferencias-toggle')
+
+  if (!titulo || !lista) return
+
+  // Animação de saída
+  lista.style.transition = 'opacity 0.3s ease, transform 0.3s ease'
+  lista.style.opacity = '0'
+  lista.style.transform = 'translateY(-10px)'
+
+  setTimeout(() => {
+    // Alternar estado
+    mostrandoGostos = !mostrandoGostos
+
+    // att título
+    titulo.textContent = mostrandoGostos ? 'eu gosto de...' : 'eu não gosto de...'
+
+    // att símbolo do botão
+    toggle.textContent = mostrandoGostos ? '↔' : '↕'
+
+    // Limpar lista atual
+    lista.innerHTML = ''
+
+    // Add novos itens
+    const itensAtivos = mostrandoGostos ? preferenciasData.gostos : preferenciasData.naoGostos
+
+    itensAtivos.forEach(item => {
+      const div = document.createElement('div')
+      div.className = `preferencia-item${!mostrandoGostos ? ' negativo' : ''}`
+      div.textContent = item
+      lista.appendChild(div)
+    })
+
+    // Animação de entrada
+    setTimeout(() => {
+      lista.style.opacity = '1'
+      lista.style.transform = 'translateY(0)'
+    }, 50)
+  }, 300)
+}
 
 //  GIF aleatório quando a página carregar
 document.addEventListener('DOMContentLoaded', function () {
