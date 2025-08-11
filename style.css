@@ -366,9 +366,152 @@ body {
   background: #000;
   color: #ccc;
 }
-
+/* conhecimentos techs*/
 .conhecimento.html {
   background-color: #000000;
   color: #ff6600;
   border-color: #ff6600;
+}
+
+.conhecimento.css {
+  background-color: #000000;
+  color: #0066ff;
+  border-color: #0066ff;
+}
+
+.conhecimento.js {
+  background-color: #000000;
+  color: #ffff00;
+  border-color: #ffff00;
+}
+
+.conhecimento.mongodb {
+  background-color: #000000;
+  color: #00ff00;
+  border-color: #00ff00;
+}
+
+.conhecimento.python {
+  background-color: #000000;
+  color: #00aa00;
+  border-color: #00aa00;
+}
+
+.conhecimento.nodejs {
+  background-color: #000000;
+  color: #00ff00;
+  border-color: #00ff00;
+}
+
+.conhecimento.express {
+  background-color: #000000;
+  color: #ccc;
+  border-color: #666;
+}
+
+.conhecimento.mysql {
+  background-color: #000000;
+  color: #0066cc;
+  border-color: #0066cc;
+}
+
+.conhecimento.postgresql {
+  background-color: #000000;
+  color: #336699;
+  border-color: #336699;
+}
+/* aprendendo techs*/
+.aprendendo h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.lista-aprendendo {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.linguagem-aprendendo {
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid #666;
+  background: #000;
+  color: #ccc;
+}
+
+.linguagem-aprendendo.java {
+  background-color: #000;
+  color: #ff8800;
+  border-color: #ff8800;
+}
+
+/* projetos*/
+
+.projetos {
+  border-top: 1px solid #666;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+}
+
+.projetos h3 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.projeto {
+  border: 1px solid #666;
+  padding: 12px;
+  margin-top: 15px;
+}
+
+.projeto h4 {
+  color: #99ccff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.projeto-tecnologias {
+  margin: 8px 0;
+}
+
+.projeto-tecnologias span {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 4px 4px  0;
+  font-size: 12px;
+  border: 1px solid #666;
+  color: #ccc;
+  background: #000;
+}
+
+.projeto-tecnologias span:contains('JavaScript'),
+.projeto-tecnologias span[title='JavaScript'] {
+  color: #ffff00;
+  border-color: #ffff00;
+}
+
+.projeto-tecnologias span:contains('Python'),
+.projeto-tecnologias span[title='Python'] {
+  color: #00aa00;
+  border-color: #00aa00;
+}
+
+
+.projeto-tecnologias span:contains('Node.js'),
+.projeto-tecnologias span[title='Node.js'] {
+  color: #00ff00;
+  border-color: #00ff00;
+}
+
+.projeto-tecnologias span:contains('MongoDB'),
+.projeto-tecnologias span[title='MongoDB'] {
+  color: #00ff00;
+  border-color: #00ff00;
 }
