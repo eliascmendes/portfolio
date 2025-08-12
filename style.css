@@ -411,6 +411,22 @@ body {
   font-weight: bold;
 }
 
+.lista-educacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.educacao {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+  color: var(--c-text-muted);
+}
+
 .lista-conhecimentos {
   display: flex;
   flex-wrap: wrap;
