@@ -115,7 +115,7 @@ body {
   padding-bottom: 8px;
 }
 
-/* widgets laterais */
+/* Novos estilos para widgets laterais */
 .widget-lateral {
   width: 100%;
   border: 1px solid var(--c-border);
@@ -194,6 +194,8 @@ body {
   background: var(--c-hover);
   color: var(--c-text);
 }
+
+
 
 /* Contato widget */
 .contato-info {
@@ -411,22 +413,6 @@ body {
   font-weight: bold;
 }
 
-.lista-educacao {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.educacao {
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  border: 1px solid var(--c-border);
-  background: var(--c-bg);
-  color: var(--c-text-muted);
-}
-
 .lista-conhecimentos {
   display: flex;
   flex-wrap: wrap;
@@ -529,6 +515,254 @@ body {
   border-color: #ff8800;
 }
 
+/* Educação */
+.educacao {
+  border-top: 1px solid var(--c-border);
+  padding: 15px;
+  margin: 0 15px 15px 15px;
+}
+
+.educacao h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.educacao-linhas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.educacao-item {
+  border: 1px solid var(--c-border);
+  padding: 10px;
+  background: var(--c-bg);
+}
+
+.edu-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-titulo {
+  color: var(--c-text);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.edu-periodo {
+  color: var(--c-text-subtle);
+  font-size: 12px;
+}
+
+.edu-detalhes {
+  color: #cccccc;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.edu-tags {
+  margin-top: 8px;
+}
+
+.edu-tags span {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 4px 4px 0;
+  font-size: 11px;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+  background: var(--c-bg);
+}
+
+/* Certificados */
+.certificados {
+  border-top: 1px solid var(--c-border);
+  padding: 15px;
+  margin: 0 15px 15px 15px;
+}
+
+.certificados h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.certificados-linhas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificado-item {
+  border: 1px solid var(--c-border);
+  padding: 10px;
+  background: var(--c-bg);
+}
+
+.cert-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-titulo {
+  color: var(--c-text);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.cert-periodo {
+  color: var(--c-text-subtle);
+  font-size: 12px;
+}
+
+.cert-detalhes {
+  color: #cccccc;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.cert-tags {
+  margin-top: 8px;
+}
+
+.cert-tags span {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 4px 4px 0;
+  font-size: 11px;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+  background: var(--c-bg);
+}
+
+/* Aprendendo lateral */
+.lista-aprendendo-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.lista-aprendendo-lateral .linguagem-aprendendo {
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid #666666;
+  background: #000000;
+  color: #cccccc;
+}
+
+.lista-aprendendo-lateral .linguagem-aprendendo.java {
+  background-color: #000000;
+  color: #ff8800;
+  border-color: #ff8800;
+}
+
+.lista-aprendendo-lateral .linguagem-aprendendo.react {
+  background-color: #000000;
+  color: #61dafb;
+  border-color: #61dafb;
+}
+
+.lista-aprendendo-lateral .linguagem-aprendendo.docker {
+  background-color: #000000;
+  color: #2496ed;
+  border-color: #2496ed;
+}
+
+/* Conhecimentos lateral */
+.conhecimentos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tech-categoria-titulo {
+  color: var(--c-text-subtle);
+  font-size: 11px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tech-item {
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+  color: var(--c-text-muted);
+}
+
+.tech-item.html {
+  background-color: var(--c-bg);
+  color: #ff6600;
+  border-color: #ff6600;
+}
+
+.tech-item.css {
+  background-color: var(--c-bg);
+  color: #0066ff;
+  border-color: #0066ff;
+}
+
+.tech-item.js {
+  background-color: var(--c-bg);
+  color: #ffff00;
+  border-color: #ffff00;
+}
+
+.tech-item.mongodb {
+  background-color: #000000;
+  color: #00b3a4;
+  border-color: #00b3a4;
+}
+
+.tech-item.python {
+  background-color: #000000;
+  color: #ffb000;
+  border-color: #ffb000;
+}
+
+.tech-item.nodejs {
+  background-color: #000000;
+  color: #3c873a;
+  border-color: #3c873a;
+}
+
+.tech-item.express {
+  background-color: #000000;
+  color: #cccccc;
+  border-color: #666666;
+}
+
+.tech-item.mysql {
+  background-color: #000000;
+  color: #f29111;
+  border-color: #f29111;
+}
+
+.tech-item.postgresql {
+  background-color: #000000;
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+
 .projeto {
   border: 1px solid var(--c-border);
   padding: 12px;
@@ -576,6 +810,7 @@ body {
   border-color: #00b3a4;
 }
 
+/* Transitions para interatividade */
 .status-valor {
   transition: opacity 0.3s ease;
 }
@@ -641,7 +876,8 @@ body {
   margin: 3px 0;
 }
 
-/* responsividade */
+
+/* Media queries para responsividade */
 @media (max-width: 1023px) {
   .menu-lateral {
     display: none;
@@ -711,6 +947,7 @@ body {
     font-size: 13px;
   }
 
+
   .projeto h4 {
     font-size: 15px;
   }
@@ -774,6 +1011,7 @@ body {
     font-size: 15px;
   }
 
+
   .projeto h4 {
     font-size: 17px;
   }
@@ -836,6 +1074,7 @@ body {
     font-size: 17px;
   }
 
+
   .projeto h4 {
     font-size: 19px;
   }
@@ -854,7 +1093,7 @@ body {
 
 }
 
-/*  responsividade */
+/* Ajustes de responsividade */
 @media (max-width: 1023px) {
   .projetos-lateral {
     display: none;
@@ -924,6 +1163,7 @@ body {
     font-size: 16px;
   }
 
+
   .contato-item {
     font-size: 12px;
   }
@@ -970,6 +1210,7 @@ body {
     padding: 6px 8px;
   }
 
+
   .contato-item {
     font-size: 13px;
   }
@@ -987,6 +1228,7 @@ body {
     font-size: 13px;
   }
 
+
   .projeto h4 {
     font-size: 21px;
   }
@@ -1001,7 +1243,7 @@ body {
 
 }
 
-/* para telas muito pequenas */
+/* Ajuste final para telas muito pequenas */
 @media (max-width: 480px) {
   body {
     padding: 10px;
