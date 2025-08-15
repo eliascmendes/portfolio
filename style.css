@@ -1,8 +1,8 @@
 :root {
   --c-bg: #000000;
   --c-text: #ffffff;
-  --c-text-muted: #cccccc;
-  --c-text-subtle: #999999;
+  --c-text-muted: #ffffff;
+  --c-text-subtle: #ffffff;
   --c-border: #666666;
   --c-border-subtle: #444444;
   --c-hover: #333333;
@@ -333,8 +333,8 @@ body {
 }
 
 .foto-perfil {
-  width: 80px;
-  height: 100px;
+  width: 150px;
+  height: 180px;
   border: 1px solid var(--c-border);
   background: var(--c-bg);
   flex-shrink: 0;
@@ -395,8 +395,8 @@ body {
 
 .introducao p {
   margin: 0 0 5px 0;
-  font-size: 12px;
-  color: #cccccc;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .conhecimentos,
@@ -551,12 +551,12 @@ body {
 .edu-titulo {
   color: var(--c-text);
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .edu-periodo {
   color: var(--c-text-subtle);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .edu-detalhes {
@@ -573,7 +573,7 @@ body {
   display: inline-block;
   padding: 3px 8px;
   margin: 0 4px 4px 0;
-  font-size: 11px;
+  font-size: 14px;
   border: 1px solid var(--c-border);
   color: var(--c-text-muted);
   background: var(--c-bg);
