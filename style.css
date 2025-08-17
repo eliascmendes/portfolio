@@ -1,13 +1,16 @@
 :root {
   --c-bg: #000000;
   --c-text: #ffffff;
-  --c-text-muted: #ffffff;
-  --c-text-subtle: #ffffff;
+  --c-text-muted: #e8e8e8;
+  --c-text-subtle: #cccccc;
+  --c-text-secondary: #b3b3b3;
+  --c-text-tertiary: #999999;
   --c-border: #666666;
   --c-border-subtle: #444444;
   --c-hover: #333333;
   --c-accent: #99ccff;
   --c-success: #00ff00;
+  --c-highlight: #ffcc99;
 }
 
 body {
@@ -16,9 +19,10 @@ body {
   color: var(--c-text);
   margin: 0;
   padding: 20px;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.6;
   min-height: 100vh;
+  font-weight: 400;
 }
 
 .menu-lateral {
@@ -46,9 +50,10 @@ body {
 
 .menu-titulo {
   font-weight: bold;
-  color: var(--c-text-muted);
+  color: var(--c-text);
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 .menu-lateral a {
@@ -367,6 +372,7 @@ body {
   font-size: 13px;
   color: var(--c-text-muted);
   margin-top: 8px;
+  line-height: 1.5;
 }
 
 .sobre h3 {
@@ -396,7 +402,8 @@ body {
 .introducao p {
   margin: 0 0 5px 0;
   font-size: 14px;
-  color: #ffffff;
+  color: var(--c-text-muted);
+  line-height: 1.6;
 }
 
 .conhecimentos,
@@ -551,18 +558,21 @@ body {
 .edu-titulo {
   color: var(--c-text);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .edu-periodo {
-  color: var(--c-text-subtle);
-  font-size: 14px;
+  color: var(--c-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .edu-detalhes {
-  color: #cccccc;
+  color: var(--c-text-secondary);
   font-size: 12px;
   margin-top: 6px;
+  line-height: 1.4;
 }
 
 .edu-tags {
@@ -616,6 +626,7 @@ body {
   color: var(--c-text);
   font-weight: bold;
   font-size: 13px;
+  line-height: 1.3;
 }
 
 .cert-periodo {
@@ -624,9 +635,10 @@ body {
 }
 
 .cert-detalhes {
-  color: #cccccc;
-  font-size: 12px;
+  color: var(--c-text-secondary);
+  font-size: 11px;
   margin-top: 6px;
+  font-weight: 500;
 }
 
 .cert-tags {
@@ -824,10 +836,10 @@ body {
 }
 
 .projeto-descricao {
-  font-size: 13px;
-  color: #cccccc;
+  font-size: 12px;
+  color: var(--c-text-muted);
   margin: 8px 0 0 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .vinculos {
@@ -878,7 +890,13 @@ body {
 
 
 /* Media queries para responsividade */
-@media (max-width: 1023px) {
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+  }
+
   .menu-lateral {
     display: none;
   }
@@ -886,6 +904,7 @@ body {
   .site-wrapper {
     margin-left: auto;
     margin-right: auto;
+    display: block;
   }
 
   .imagem-lateral-esquerda,
@@ -893,98 +912,143 @@ body {
     display: none;
   }
 
+  .recipiente {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .sobre {
+    font-size: 12px;
+  }
+
+  .introducao p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .edu-titulo {
+    font-size: 13px;
+  }
+
+  .edu-periodo {
+    font-size: 11px;
+  }
+
+  .cert-titulo {
+    font-size: 12px;
+  }
+
+  .projeto-descricao {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    font-size: 14px;
+  }
+
+  .menu-lateral {
+    display: none;
+  }
+
   .site-wrapper {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+  }
+
+  .imagem-lateral-esquerda,
+  .imagem-lateral-direita {
+    display: none;
   }
 
   .recipiente {
     max-width: 100%;
   }
-}
-
-@media (min-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  .sobre h3 {
-    font-size: 16px;
-  }
-
-  .introducao h2 {
-    font-size: 18px;
-  }
-
-  .conhecimentos h3 {
-    font-size: 16px;
-  }
-
-  .aprendendo h3 {
-    font-size: 16px;
-  }
 
   .sobre {
     font-size: 14px;
   }
 
   .introducao p {
-    font-size: 14px;
-  }
-
-  .conhecimento {
-    font-size: 13px;
-  }
-
-  .linguagem-aprendendo {
-    font-size: 13px;
-  }
-
-  .vinculos {
-    font-size: 14px;
-  }
-
-  .footer {
-    font-size: 13px;
-  }
-
-
-  .projeto h4 {
     font-size: 15px;
   }
 
-  .projeto-tecnologias span {
-    font-size: 13px;
+  .edu-titulo {
+    font-size: 15px;
   }
 
   .projeto-descricao {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .sobre {
+    font-size: 15px;
+  }
+
+  .introducao p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .edu-titulo {
+    font-size: 16px;
+  }
+
+  .edu-periodo {
+    font-size: 13px;
+  }
+
+  .cert-titulo {
     font-size: 14px;
   }
 
-  .assinatura {
+  .cert-detalhes {
     font-size: 12px;
   }
 
+  .projeto h4 {
+    font-size: 16px;
+  }
+
+  .projeto-tecnologias span {
+    font-size: 13px;
+  }
+
+  .projeto-descricao {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .widget-lateral {
+    font-size: 13px;
+  }
+
+  .status-item {
+    font-size: 12px;
+  }
+
+  .contato-item {
+    font-size: 12px;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   body {
-    font-size: 18px;
-  }
-
-  .sobre h3 {
-    font-size: 18px;
-  }
-
-  .introducao h2 {
-    font-size: 20px;
-  }
-
-  .conhecimentos h3 {
-    font-size: 18px;
-  }
-
-  .aprendendo h3 {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .sobre {
@@ -992,28 +1056,103 @@ body {
   }
 
   .introducao p {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 1.7;
   }
 
-  .conhecimento {
+  .edu-titulo {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .edu-periodo {
+    font-size: 14px;
+  }
+
+  .edu-detalhes {
+    font-size: 13px;
+  }
+
+  .cert-titulo {
     font-size: 15px;
   }
 
-  .linguagem-aprendendo {
-    font-size: 15px;
+  .cert-detalhes {
+    font-size: 13px;
   }
 
-  .vinculos {
-    font-size: 16px;
+  .projeto h4 {
+    font-size: 17px;
+  }
+
+  .projeto-tecnologias span {
+    font-size: 14px;
+  }
+
+  .projeto-descricao {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .footer {
     font-size: 15px;
   }
 
+  .widget-lateral {
+    font-size: 14px;
+  }
+
+  .widget-lateral h3 {
+    font-size: 15px;
+  }
+
+  .status-item {
+    font-size: 13px;
+  }
+
+  .contato-item {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .sobre {
+    font-size: 17px;
+  }
+
+  .introducao p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .edu-titulo {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .edu-periodo {
+    font-size: 15px;
+  }
+
+  .edu-detalhes {
+    font-size: 14px;
+  }
+
+  .cert-titulo {
+    font-size: 16px;
+  }
+
+  .cert-detalhes {
+    font-size: 14px;
+  }
 
   .projeto h4 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .projeto-tecnologias span {
@@ -1022,32 +1161,44 @@ body {
 
   .projeto-descricao {
     font-size: 16px;
+    line-height: 1.7;
   }
 
-  .assinatura {
-    font-size: 11px;
+  .footer {
+    font-size: 16px;
+  }
+
+  .widget-lateral {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .widget-lateral h3 {
+    font-size: 16px;
+  }
+
+  .status-item {
+    font-size: 14px;
+  }
+
+  .estatistica-numero {
+    font-size: 20px;
+  }
+
+  .contato-item {
+    font-size: 14px;
+  }
+
+  .imagem-lateral-direita,
+  .imagem-lateral-esquerda {
+    width: 300px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 2560px) {
   body {
-    font-size: 20px;
-  }
-
-  .sobre h3 {
-    font-size: 20px;
-  }
-
-  .introducao h2 {
-    font-size: 22px;
-  }
-
-  .conhecimentos h3 {
-    font-size: 20px;
-  }
-
-  .aprendendo h3 {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.8;
   }
 
   .sobre {
@@ -1055,205 +1206,71 @@ body {
   }
 
   .introducao p {
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.8;
   }
 
-  .conhecimento {
-    font-size: 17px;
-  }
-
-  .linguagem-aprendendo {
-    font-size: 17px;
-  }
-
-  .vinculos {
-    font-size: 18px;
-  }
-
-  .footer {
-    font-size: 17px;
-  }
-
-
-  .projeto h4 {
+  .edu-titulo {
     font-size: 19px;
   }
 
-  .projeto-tecnologias span {
-    font-size: 17px;
+  .edu-periodo {
+    font-size: 16px;
+  }
+
+  .projeto h4 {
+    font-size: 20px;
   }
 
   .projeto-descricao {
-    font-size: 18px;
+    font-size: 17px;
   }
 
-  .assinatura {
-    font-size: 12px;
+  .widget-lateral {
+    font-size: 16px;
+    padding: 18px;
   }
 
+  .widget-lateral h3 {
+    font-size: 17px;
+  }
+
+  .imagem-lateral-direita,
+  .imagem-lateral-esquerda {
+    width: 350px;
+  }
 }
 
-/* Ajustes de responsividade */
 @media (max-width: 1023px) {
   .projetos-lateral {
     display: none;
   }
 }
 
-@media (min-width: 1024px) {
-  .projetos-lateral h3 {
-    font-size: 16px;
-  }
-
-  .projeto h4 {
-    font-size: 15px;
-  }
-
-  .projeto-tecnologias span {
-    font-size: 13px;
-  }
-
-  .projeto-descricao {
-    font-size: 14px;
-  }
+.status-valor {
+  transition: opacity 0.3s ease;
+  font-weight: 500;
 }
 
-@media (min-width: 1440px) {
-  .imagem-lateral-direita {
-    width: 260px;
-  }
-
-  .imagem-lateral-esquerda {
-    width: 260px;
-  }
-
-  .widget-lateral h3 {
-    font-size: 15px;
-  }
-
-  .widget-lateral {
-    font-size: 13px;
-  }
-
-  .status-item {
-    font-size: 12px;
-  }
-
-  .estatistica-numero {
-    font-size: 18px;
-  }
-
-  .link-rapido {
-    font-size: 12px;
-  }
-
-  .projetos-lateral h3 {
-    font-size: 18px;
-  }
-
-  .projeto h4 {
-    font-size: 17px;
-  }
-
-  .projeto-tecnologias span {
-    font-size: 15px;
-  }
-
-  .projeto-descricao {
-    font-size: 16px;
-  }
-
-
-  .contato-item {
-    font-size: 12px;
-  }
-
-  .preferencias-toggle {
-    font-size: 13px;
-  }
-
-  .preferencia-item {
-    font-size: 12px;
-  }
-
-  .assinatura {
-    font-size: 12px;
-  }
+.estatistica-label {
+  color: var(--c-text-tertiary);
+  font-size: 10px;
+  margin-top: 2px;
+  font-weight: 400;
 }
 
-@media (min-width: 1920px) {
-
-  .imagem-lateral-direita,
-  .imagem-lateral-esquerda {
-    width: 300px;
-  }
-
-  .widget-lateral {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .widget-lateral h3 {
-    font-size: 16px;
-  }
-
-  .status-item {
-    font-size: 13px;
-  }
-
-  .estatistica-numero {
-    font-size: 20px;
-  }
-
-  .link-rapido {
-    font-size: 13px;
-    padding: 6px 8px;
-  }
-
-
-  .contato-item {
-    font-size: 13px;
-  }
-
-  .preferencias-toggle {
-    font-size: 14px;
-    padding: 3px 8px;
-  }
-
-  .preferencia-item {
-    font-size: 13px;
-  }
-
-  .assinatura {
-    font-size: 13px;
-  }
-
-
-  .projeto h4 {
-    font-size: 21px;
-  }
-
-  .projeto-tecnologias span {
-    font-size: 19px;
-  }
-
-  .projeto-descricao {
-    font-size: 20px;
-  }
-
+.edu-tags span,
+.cert-tags span {
+  font-size: 11px;
+  font-weight: 500;
 }
 
-/* Ajuste final para telas muito pequenas */
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
+.menu-lateral a:hover,
+.link-rapido:hover {
+  transition: all 0.2s ease;
+}
 
-  .site-wrapper {
-    margin-left: auto;
-  }
-
-  .recipiente {
-    margin: 0;
-  }
+.widget-lateral:hover {
+  border-color: var(--c-text-subtle);
+  transition: border-color 0.3s ease;
 }
