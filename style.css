@@ -522,6 +522,80 @@ body {
   border-color: #ff8800;
 }
 
+/* Experiência */
+.experiencia {
+  border-top: 1px solid var(--c-border);
+  padding: 15px;
+  margin: 0 15px 15px 15px;
+}
+
+.experiencia h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.experiencia-linhas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experiencia-item {
+  border: 1px solid var(--c-border);
+  padding: 10px;
+  background: var(--c-bg);
+}
+
+.exp-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-titulo {
+  color: var(--c-text);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.exp-periodo {
+  color: var(--c-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.exp-empresa {
+  color: var(--c-accent);
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.exp-detalhes {
+  color: var(--c-text-secondary);
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.exp-tags {
+  margin-top: 8px;
+}
+
+.exp-tags span {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 4px 4px 0;
+  font-size: 11px;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+  background: var(--c-bg);
+}
+
 /* Educação */
 .educacao {
   border-top: 1px solid var(--c-border);
@@ -889,7 +963,83 @@ body {
 }
 
 
-/* Media queries para responsividade */
+/* Media queries para responsividade  */
+@media (max-width: 320px) {
+  body {
+    font-size: 11px;
+    padding: 5px;
+    line-height: 1.4;
+  }
+
+  .menu-lateral {
+    display: none;
+  }
+
+  .site-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    gap: 0;
+  }
+
+  .imagem-lateral-esquerda,
+  .imagem-lateral-direita {
+    display: none;
+  }
+
+  .recipiente {
+    max-width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .conteudo {
+    padding: 0;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 120px;
+    margin-top: -20px;
+  }
+
+  .secao-capa {
+    min-height: 80px;
+  }
+
+  .introducao,
+  .experiencia,
+  .educacao,
+  .certificados {
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+  }
+
+  .exp-topo,
+  .edu-topo,
+  .cert-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .exp-tags span,
+  .edu-tags span,
+  .cert-tags span {
+    font-size: 9px;
+    padding: 2px 4px;
+    margin: 0 2px 2px 0;
+  }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 12px;
@@ -917,6 +1067,19 @@ body {
     margin: 0;
   }
 
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 140px;
+    margin-top: -30px;
+  }
+
   .sobre {
     font-size: 12px;
   }
@@ -924,6 +1087,27 @@ body {
   .introducao p {
     font-size: 13px;
     line-height: 1.5;
+  }
+
+  .exp-titulo {
+    font-size: 13px;
+  }
+
+  .exp-periodo {
+    font-size: 11px;
+  }
+
+  .exp-empresa {
+    font-size: 11px;
+  }
+
+  .exp-detalhes {
+    font-size: 11px;
+  }
+
+  .exp-tags span {
+    font-size: 10px;
+    padding: 2px 6px;
   }
 
   .edu-titulo {
@@ -943,9 +1127,10 @@ body {
   }
 }
 
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 13px;
+    padding: 15px;
   }
 
   .menu-lateral {
@@ -965,6 +1150,55 @@ body {
 
   .recipiente {
     max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .perfil {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .foto-perfil {
+    width: 130px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  body {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .menu-lateral {
+    display: none;
+  }
+
+  .site-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 800px;
+  }
+
+  .imagem-lateral-esquerda,
+  .imagem-lateral-direita {
+    display: none;
+  }
+
+  .recipiente {
+    max-width: 100%;
+  }
+
+  .perfil {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .foto-perfil {
+    width: 140px;
+    height: 160px;
   }
 
   .sobre {
@@ -973,6 +1207,26 @@ body {
 
   .introducao p {
     font-size: 15px;
+  }
+
+  .exp-titulo {
+    font-size: 14px;
+  }
+
+  .exp-periodo {
+    font-size: 12px;
+  }
+
+  .exp-empresa {
+    font-size: 12px;
+  }
+
+  .exp-detalhes {
+    font-size: 12px;
+  }
+
+  .exp-tags span {
+    font-size: 11px;
   }
 
   .edu-titulo {
@@ -984,7 +1238,27 @@ body {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .site-wrapper {
+    max-width: 1000px;
+  }
+
+  .imagem-lateral-esquerda,
+  .imagem-lateral-direita {
+    width: 180px;
+  }
+
+  .recipiente {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
   body {
     font-size: 15px;
     line-height: 1.6;
@@ -997,6 +1271,26 @@ body {
   .introducao p {
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .exp-titulo {
+    font-size: 15px;
+  }
+
+  .exp-periodo {
+    font-size: 13px;
+  }
+
+  .exp-empresa {
+    font-size: 13px;
+  }
+
+  .exp-detalhes {
+    font-size: 13px;
+  }
+
+  .exp-tags span {
+    font-size: 12px;
   }
 
   .edu-titulo {
@@ -1058,6 +1352,28 @@ body {
   .introducao p {
     font-size: 17px;
     line-height: 1.7;
+  }
+
+  .exp-titulo {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .exp-periodo {
+    font-size: 14px;
+  }
+
+  .exp-empresa {
+    font-size: 14px;
+  }
+
+  .exp-detalhes {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .exp-tags span {
+    font-size: 13px;
   }
 
   .edu-titulo {
@@ -1128,6 +1444,28 @@ body {
   .introducao p {
     font-size: 18px;
     line-height: 1.7;
+  }
+
+  .exp-titulo {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .exp-periodo {
+    font-size: 15px;
+  }
+
+  .exp-empresa {
+    font-size: 15px;
+  }
+
+  .exp-detalhes {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .exp-tags span {
+    font-size: 14px;
   }
 
   .edu-titulo {
@@ -1210,6 +1548,28 @@ body {
     line-height: 1.8;
   }
 
+  .exp-titulo {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .exp-periodo {
+    font-size: 16px;
+  }
+
+  .exp-empresa {
+    font-size: 16px;
+  }
+
+  .exp-detalhes {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .exp-tags span {
+    font-size: 15px;
+  }
+
   .edu-titulo {
     font-size: 19px;
   }
@@ -1238,6 +1598,65 @@ body {
   .imagem-lateral-direita,
   .imagem-lateral-esquerda {
     width: 350px;
+  }
+}
+
+
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+  }
+
+  .recipiente {
+    margin: 0;
+  }
+
+  .perfil {
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 120px;
+  }
+
+  .secao-capa {
+    min-height: 60px;
+  }
+
+  .introducao,
+  .experiencia,
+  .educacao,
+  .certificados {
+    padding: 8px;
+    margin: 0 8px 8px 8px;
+  }
+}
+
+
+@media (min-height: 800px) and (max-width: 480px) {
+  .recipiente {
+    min-height: calc(100vh - 40px);
+  }
+
+  .footer {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 2560px) {
+  .site-wrapper {
+    max-width: 1600px;
+  }
+
+  .imagem-lateral-direita,
+  .imagem-lateral-esquerda {
+    width: 400px;
+  }
+
+  .recipiente {
+    max-width: 600px;
   }
 }
 
