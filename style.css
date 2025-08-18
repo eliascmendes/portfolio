@@ -963,16 +963,74 @@ body {
 }
 
 
+/* Menu mobile  */
+.menu-mobile {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-mobile-icon {
+  width: 20px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-mobile-icon span {
+  width: 100%;
+  height: 2px;
+  background: var(--c-text);
+  transition: all 0.3s ease;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.menu-lateral.mobile-open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1001;
+  background: var(--c-bg);
+  border-right: 1px solid var(--c-border);
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
 /* Media queries para responsividade  */
 @media (max-width: 320px) {
   body {
     font-size: 11px;
     padding: 5px;
     line-height: 1.4;
+    padding-top: 50px;
+  }
+
+  .menu-mobile {
+    display: block;
   }
 
   .menu-lateral {
     display: none;
+    transform: translateX(-100%);
   }
 
   .site-wrapper {
@@ -1045,10 +1103,16 @@ body {
     font-size: 12px;
     padding: 10px;
     line-height: 1.5;
+    padding-top: 50px;
+  }
+
+  .menu-mobile {
+    display: block;
   }
 
   .menu-lateral {
     display: none;
+    transform: translateX(-100%);
   }
 
   .site-wrapper {
@@ -1131,10 +1195,16 @@ body {
   body {
     font-size: 13px;
     padding: 15px;
+    padding-top: 50px;
+  }
+
+  .menu-mobile {
+    display: block;
   }
 
   .menu-lateral {
     display: none;
+    transform: translateX(-100%);
   }
 
   .site-wrapper {
@@ -1169,10 +1239,16 @@ body {
   body {
     font-size: 14px;
     padding: 20px;
+    padding-top: 50px;
+  }
+
+  .menu-mobile {
+    display: block;
   }
 
   .menu-lateral {
     display: none;
+    transform: translateX(-100%);
   }
 
   .site-wrapper {

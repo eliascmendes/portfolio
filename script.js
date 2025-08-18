@@ -56,6 +56,44 @@ function selecionarGifFavorito() {
   return gifsFavoritos[indiceAleatorio]
 }
 
+// Controle do menu mobile
+function toggleMobileMenu() {
+  const menuLateral = document.querySelector('.menu-lateral')
+  const overlay = document.querySelector('.menu-overlay')
+
+  if (menuLateral.classList.contains('mobile-open')) {
+    closeMobileMenu()
+  } else {
+    openMobileMenu()
+  }
+}
+
+function openMobileMenu() {
+  const menuLateral = document.querySelector('.menu-lateral')
+  const overlay = document.querySelector('.menu-overlay')
+
+  menuLateral.classList.add('mobile-open')
+  overlay.style.display = 'block'
+  document.body.style.overflow = 'hidden'
+}
+
+function closeMobileMenu() {
+  const menuLateral = document.querySelector('.menu-lateral')
+  const overlay = document.querySelector('.menu-overlay')
+
+  menuLateral.classList.remove('mobile-open')
+  overlay.style.display = 'none'
+  document.body.style.overflow = 'auto'
+}
+
+// Fechar menu ao clicar em links
+document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.menu-lateral a')
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu)
+  })
+})
+
 function atualizarCapaComGif(gif) {
   const imagemCapa = document.querySelector('.imagem-capa')
   if (!imagemCapa || !gif) return
