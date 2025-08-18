@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elias - Desenvolvedor Backend especializado em Node.js, Python, MongoDB e PostgreSQL. Portfólio com projetos de automação e desenvolvimento web." />
+  <meta name="keywords" content="desenvolvedor, backend, nodejs, python, mongodb, postgresql, portfolio, automação" />
+  <meta name="author" content="Elias Camilo" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio - Elias" />
+  <meta property="og:description" content="Desenvolvedor Backend especializado em Node.js, Python e automação" />
+  <meta property="og:url" content="https://eliascmendes.github.io/portfolio/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio - Elias" />
+  <meta name="twitter:description" content="Desenvolvedor Backend especializado em Node.js, Python e automação" />
+
   <title>Portfolio - Elias</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <!-- Menu Mobile -->
-  <div class="menu-mobile" onclick="toggleMobileMenu()">
+  <div class="menu-mobile" onclick="toggleMobileMenu()" role="button" aria-label="Abrir menu de navegação" tabindex="0">
     <div class="menu-mobile-icon">
       <span></span>
       <span></span>
@@ -39,7 +51,7 @@
   </nav>
   <div class="site-wrapper">
     <div class="imagem-lateral-esquerda">
-    <img src="https://i.pinimg.com/736x/eb/10/74/eb1074d1a298aeaee9682e6f4b728437.jpg" />
+    <img src="https://i.pinimg.com/736x/eb/10/74/eb1074d1a298aeaee9682e6f4b728437.jpg" alt="Imagem lateral esquerda" loading="lazy" />
 
       <div class="widget-lateral">
         <h3>Status</h3>
@@ -60,7 +72,7 @@
       <div class="widget-lateral">
         <h3>Estatísticas</h3>
         <div class="estatistica-item">
-          <span class="estatistica-numero">3</span>
+          <span class="estatistica-numero">4</span>
           <span class="estatistica-label">Projetos</span>
         </div>
         <div class="estatistica-item">
@@ -80,31 +92,6 @@
         </div>
       </div>
 
-      <!-- <div class="widget-lateral">
-        <h3>Links Rápidos</h3>
-        <div class="links-rapidos">
-          <a href="eliascamilo70@outlook.com" class="link-rapido">📧 Email</a>
-          <a href="#" class="link-rapido">📱 Discord: _drugui</a>
-          <a href="https://open.spotify.com/user/31rsat2rsdzy2be3uhaz3kxilho4" class="link-rapido">🎵 Spotify</a>
-        </div>
-      </div> -->
-
-      <!-- <div class="widget-lateral preferencias">
-        <div class="preferencias-header">
-          <h3 id="preferencias-titulo">eu gosto de...</h3>
-          <button class="preferencias-toggle" onclick="alternarPreferencias()">↔</button>
-        </div>
-        <div class="preferencias-lista" id="preferencias-lista">
-          <div class="preferencia-item">filmes</div>
-          <div class="preferencia-item">backend</div>
-          <div class="preferencia-item">café</div>
-          <div class="preferencia-item">chuva</div>
-          <div class="preferencia-item">silêncio</div>
-          <div class="preferencia-item">música</div>
-          <div class="preferencia-item">noites frias</div>
-        </div>
-      </div> -->
-
     </div>
     <div class="recipiente">
       <div class="conteudo">
@@ -114,7 +101,7 @@
 
         <div class="perfil">
           <div class="foto-perfil">
-            <img src="https://i.pinimg.com/1200x/b2/b9/56/b2b9565f36ea0728201260e2645d3931.jpg" alt="Foto de perfil" />
+            <img src="image/profile_picture.png" alt="Foto de perfil de Elias Camilo - Desenvolvedor Backend" loading="lazy" />
           </div>
           <div class="sobre">
             <p>Elias</p>
@@ -153,7 +140,7 @@
           <div class="educacao-linhas">
             <div class="educacao-item">
               <div class="edu-topo">
-                <span class="edu-titulo">Ensino Superior — Bacharelado intedisciplinar em Ciência e Tecnologia</span>
+                <span class="edu-titulo">Ensino Superior — Bacharelado Interdisciplinar em Ciência e Tecnologia</span>
                 <span class="edu-periodo">Em andamento</span>
               </div>
               <div class="edu-detalhes"></div>
@@ -192,28 +179,18 @@
           <div class="certificados-linhas">
             <div class="certificado-item">
               <div class="cert-topo">
-                <span class="cert-titulo">HTML e CSS
-                para Iniciantes </span>
-                <span class="cert-periodo">2022</span>
+                <span class="cert-titulo">Formação Back End - 2025</span>
+                <span class="cert-periodo">2025</span>
               </div>
-              <div class="cert-detalhes">ORIGAMID</div>
+              <div class="cert-detalhes">Alura - Foram 11 semanas de treinamento intensivo em backend, onde aprendi Node.js, Express, MongoDB e outras tecnologias.</div>
               <div class="cert-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-
-            <div class="certificado-item">
-              <div class="cert-topo">
-                <span class="cert-titulo">JavaScript e
-                jQuery</span>
-                <span class="cert-periodo">2024</span>
-              </div>
-              <div class="cert-detalhes">ORIGAMID</div>
-              <div class="cert-tags">
-                <span>JavaScript</span>
-                <span>jQuery</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+                <span>Modelagem de banco de dados</span>
+                <span>API</span>
               </div>
             </div>
 
@@ -230,10 +207,49 @@
                 <span>JavaScript</span>
               </div>
             </div>
+
+            <div class="certificado-item">
+              <div class="cert-topo">
+                <span class="cert-titulo">Jovem Tech - Include 2025</span>
+                <span class="cert-periodo">2025</span>
+              </div>
+              <div class="cert-detalhes">Alura - Fundamentos e Introdução à Lógica de programação</div>
+              <div class="cert-tags">
+                <span>Lógica de Programação</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+            <div class="certificado-item">
+              <div class="cert-topo">
+                <span class="cert-titulo">JavaScript e jQuery</span>
+                <span class="cert-periodo">2024</span>
+              </div>
+              <div class="cert-detalhes">ORIGAMID</div>
+              <div class="cert-tags">
+                <span>JavaScript</span>
+                <span>jQuery</span>
+              </div>
+            </div>
+
+            <div class="certificado-item">
+              <div class="cert-topo">
+                <span class="cert-titulo">HTML e CSS para Iniciantes</span>
+                <span class="cert-periodo">2022</span>
+              </div>
+              <div class="cert-detalhes">ORIGAMID</div>
+              <div class="cert-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="shikamaru-secao">
-          <img src="image/shikamaru_icon.jpg" alt="Shikamaru" />
+          <img src="image/shikamaru_icon.jpg" alt="Ícone do personagem Shikamaru de Naruto" loading="lazy" />
         </div>
         <div class="footer">
           <p>Feito com HTML, CSS e JavaScript</p>
@@ -245,19 +261,28 @@
       <div class="projetos-lateral">
         <h3>Projetos Recentes</h3>
         <div class="projeto">
+          <h4>Ecovigia</h4>
+          <div class="projeto-tecnologias">
+            <span title="JavaScript">JavaScript</span>
+            <span title="Node.js">Node.js</span>
+            <span title="Express.js">Express.js</span>
+            <span title="PostgreSQL" class="postgresql">PostgreSQL</span>
+          </div>
+          <p class="projeto-descricao">
+            Plataforma digital para combater o descarte irregular de lixo em São Luís. Desenvolvida em equipe durante o programa Trilhas Back-End, oferece mapa interativo, sistema de denúncias e conexão entre cidadãos e autoridades.
+          </p>
+        </div>
+
+        <div class="projeto">
           <h4>ItaMind</h4>
           <div class="projeto-tecnologias">
             <span title="JavaScript">JavaScript</span>
             <span title="Node.js">Node.js</span>
             <span title="Express.js">Express.js</span>
             <span title="MongoDB">MongoDB</span>
-
           </div>
           <p class="projeto-descricao">
-            Fui responsável pelo desenvolvimento da API que integrou o frontend com o algoritmo de previsão de demanda
-            desenvolvido em Python. O projeto teve como foco otimizar o processo de descongelamento de SKUs,
-            especialmente asas de frango, ajudando a definir a quantidade ideal e o momento certo para o
-            descongelamento.
+            Sistema de otimização para processo de descongelamento de SKUs. Responsável pelo desenvolvimento da API que integrou frontend com algoritmo de previsão de demanda em Python.
           </p>
         </div>
       </div>
@@ -307,6 +332,11 @@
             <span>GMT-3</span>
           </div>
         </div>
+      </div>
+
+      <!-- Easter egg -->
+      <div class="alura-badge">
+        <img src="image/Logo_Alura_Include_(1).svg" alt="" loading="lazy" />
       </div>
     </div>
   </div>

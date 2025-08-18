@@ -4,14 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos de Elias - ItaMind, Ecovigia, Movvi e Portfolio. Desenvolvimentos em Node.js, Python, MongoDB e tecnologias web." />
+  <meta name="keywords" content="projetos, portfolio, nodejs, python, mongodb, ecovigia, itamind, movvi" />
+  <meta name="author" content="Elias Camilo" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projetos - Elias" />
+  <meta property="og:description" content="Conhe\u00e7a os projetos desenvolvidos por Elias: ItaMind, Ecovigia, Movvi e mais" />
+
   <title>Projetos - Elias</title>
   <link rel="stylesheet" href="projetos.css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <!-- Menu Mobile -->
-  <div class="menu-mobile" onclick="toggleMobileMenu()">
+  <div class="menu-mobile" onclick="toggleMobileMenu()" role="button" aria-label="Abrir menu de navegação" tabindex="0">
     <div class="menu-mobile-icon">
       <span></span>
       <span></span>
@@ -37,20 +45,20 @@
 
   <div class="site-wrapper">
     <div class="imagem-lateral-esquerda">
-      <img src="https://i.pinimg.com/736x/29/be/82/29be823ec195578635697f09ecc1a873.jpg" />
+      <img src="https://i.pinimg.com/736x/29/be/82/29be823ec195578635697f09ecc1a873.jpg" alt="Arte  para página de projetos" loading="lazy" />
 
       <div class="widget-lateral">
         <h3>Estatísticas</h3>
         <div class="estatistica-item">
-          <span class="estatistica-numero">3</span>
+          <span class="estatistica-numero">4</span>
           <span class="estatistica-label">Projetos</span>
         </div>
         <div class="estatistica-item">
-          <span class="estatistica-numero">1</span>
-          <span class="estatistica-label">Hackathon</span>
+          <span class="estatistica-numero">2</span>
+          <span class="estatistica-label">Hackathons</span>
         </div>
         <div class="estatistica-item">
-          <span class="estatistica-numero">5</span>
+          <span class="estatistica-numero">6</span>
           <span class="estatistica-label">Tecnologias</span>
         </div>
       </div>
@@ -88,7 +96,7 @@
           </div>
 
           <div class="projeto-descricao">
-            <p>Sistema de otimização para processo de descongelamento de SKUs em frigoríficos. Fui responsável pelo desenvolvimento da API que integrou o frontend com algoritmo de previsão de demanda desenvolvido em Python.</p>
+            <p>Sistema de otimização para processo de descongelamento de SKUs. Fui responsável pelo desenvolvimento da API que integrou o frontend com algoritmo de previsão de demanda desenvolvido em Python.</p>
 
             <div class="projeto-detalhes">
               <h4>Principais Responsabilidades:</h4>
@@ -129,7 +137,7 @@
           </div>
 
           <div class="projeto-descricao">
-            <p>Aplicativo desenvolvido durante o Hackathon Trilhas (26-27 julho) que recebeu menção honrosa. Mais que um app de corrida comum, a Movvi analisa variáveis qualitativas como segurança, infraestrutura, arborização e qualidade do ar para sugerir rotas personalizadas.</p>
+            <p>Startup desenvolvida durante o Hackathon Trilhas (26-27 julho) que recebeu menção honrosa. Mais que um app de corrida comum, a Movvi analisa variáveis qualitativas como segurança, infraestrutura, arborização e qualidade do ar para sugerir rotas personalizadas.</p>
 
             <div class="projeto-detalhes">
               <h4>Diferencial da Solução:</h4>
@@ -163,6 +171,54 @@
 
         <div class="projeto-card">
           <div class="projeto-header">
+            <h2>Ecovigia</h2>
+            <span class="projeto-status concluido">Projeto Concluído</span>
+          </div>
+
+          <div class="projeto-tecnologias">
+            <span class="tech-tag html">HTML</span>
+            <span class="tech-tag css">CSS</span>
+            <span class="tech-tag js">JavaScript</span>
+            <span class="tech-tag nodejs">Node.js</span>
+            <span class="tech-tag express">Express.js</span>
+            <span class="tech-tag postgresql">PostgreSQL</span>
+          </div>
+
+          <div class="projeto-descricao">
+            <p>Plataforma digital para combater o descarte irregular de lixo em São Luís, desenvolvida durante o desafio 04 do programa Trilhas Back-End. Oferece canal prático para denúncias e conecta cidadãos às autoridades.</p>
+
+            <div class="projeto-detalhes">
+              <h4>Funcionalidades Principais:</h4>
+              <ul>
+                <li>Mapa interativo com Leaflet.js para visualizar denúncias</li>
+                <li>Formulário para envio de fotos, descrições e localizações</li>
+                <li>Sistema de priorização por votação da comunidade</li>
+                <li>Seção de comentários para discussões colaborativas</li>
+                <li>Autenticação segura com JWT</li>
+              </ul>
+
+              <h4>Impacto Social:</h4>
+              <ul>
+                <li>Solução para problema ambiental persistente</li>
+                <li>Canal democrático entre cidadãos e autoridades</li>
+                <li>Promoção de respostas mais rápidas e eficazes</li>
+                <li>Fortalecimento da participação comunitária</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="projeto-links">
+            <a href="https://ecovigia-site.onrender.com/" class="projeto-link demo">
+              <span>🌐</span> Acessar Plataforma
+            </a>
+            <a href="https://github.com/eliascmendes/e11-descarte-residuosescarte-residuos" class="projeto-link github">
+              <span>📁</span> Ver no GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="projeto-card">
+          <div class="projeto-header">
             <h2>Portfolio Pessoal</h2>
             <span class="projeto-status ativo">Ativo</span>
           </div>
@@ -189,7 +245,7 @@
           </div>
 
           <div class="projeto-links">
-            <a href="https://github.com/eliascmendes" class="projeto-link github">
+            <a href="https://github.com/eliascmendes/portfolio" class="projeto-link github">
               <span>📁</span> Ver no GitHub
             </a>
             <a href="index.html" class="projeto-link demo">
@@ -260,6 +316,10 @@
             <span>Remoto ou presencial</span>
           </div>
         </div>
+      </div>
+
+      <div class="alura-badge">
+        <img src="image/Logo_Alura_Include_(1).svg" alt="Alura logo" loading="lazy" />
       </div>
     </div>
   </div>

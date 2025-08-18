@@ -86,11 +86,29 @@ function closeMobileMenu() {
   document.body.style.overflow = 'auto'
 }
 
-// Fechar menu ao clicar em links
+// Fechar menu ao clicar em links e suporte a teclado
 document.addEventListener('DOMContentLoaded', function() {
   const menuLinks = document.querySelectorAll('.menu-lateral a')
   menuLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu)
+  })
+
+  // Suporte a teclado para menu mobile
+  const menuMobile = document.querySelector('.menu-mobile')
+  if (menuMobile) {
+    menuMobile.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        toggleMobileMenu()
+      }
+    })
+  }
+
+  // Fechar menu com ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeMobileMenu()
+    }
   })
 })
 
@@ -119,7 +137,9 @@ function atualizarCapaComGif(gif) {
 function carregarCapaAleatoria() {
   const gifSelecionado = selecionarGifAleatorio()
   atualizarCapaComGif(gifSelecionado)
-  if (gifSelecionado) console.log(`Capa carregada: ${gifSelecionado.alt}`)
+  if (gifSelecionado && process?.env?.NODE_ENV !== 'production') {
+    console.log(`Capa carregada: ${gifSelecionado.alt}`)
+  }
 }
 
 //  GIF favorito na capa
@@ -130,7 +150,9 @@ function carregarFavorito() {
   }
   const gifSelecionado = selecionarGifFavorito()
   atualizarCapaComGif(gifSelecionado)
-  if (gifSelecionado) console.log(`GIF favorito carregado: ${gifSelecionado.alt}`)
+  if (gifSelecionado && process?.env?.NODE_ENV !== 'production') {
+    console.log(`GIF favorito carregado: ${gifSelecionado.alt}`)
+  }
 }
 
 function reiniciarTimer() {
@@ -140,14 +162,18 @@ function reiniciarTimer() {
 
   timerTrocaGif = setTimeout(function () {
     carregarCapaAleatoria()
-    console.log('GIF trocado automaticamente após 2 minutos')
+    if (process?.env?.NODE_ENV !== 'production') {
+      console.log('GIF trocado automaticamente após 2 minutos')
+    }
   }, 120000)
 }
 
 // adicionar novo GIF à lista
 function adicionarNovoGif(url, alt) {
   capasGifs.push({ url, alt })
-  console.log(`Novo GIF adicionado: ${alt}`)
+  if (process?.env?.NODE_ENV !== 'production') {
+    console.log(`Novo GIF adicionado: ${alt}`)
+  }
 }
 
 //  trocar capa manualmente
